@@ -1,0 +1,4 @@
+getTransactions
+
+mysql -u root -p unmsm_tramite < C:/Users/Windows 10 Pro/Documents/Semestre 2024_2/Integracion de sistemas/projects/expedientes/unmsm_tramite.sql
+mysql -u root -p unmsm_tramite < C:/unmsm_tramite.sql

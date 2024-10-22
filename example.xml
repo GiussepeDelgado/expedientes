@@ -1,0 +1,22 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Definición del tipo complejo "persona" -->
+  <xs:element name="persona">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- Definición de los elementos -->
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="edad" type="xs:integer"/>
+        <xs:element name="email" type="xs:string">
+          <!-- Restricción de patrón para el formato de email -->
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="esEmpleado" type="xs:boolean"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
