@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using GestionExpedientesAPI.Data;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace GestionExpedientesAPI
 {
@@ -26,6 +27,15 @@ namespace GestionExpedientesAPI
                     new MySqlServerVersion(new Version(10, 4, 32)) // Ajusta la versión según tu versión de MariaDB
                 ));
 
+            // Habilitar CORS
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllOrigins",
+                    builder => builder.AllowAnyOrigin()
+                                      .AllowAnyMethod()
+                                      .AllowAnyHeader());
+            });
+
             services.AddControllers();
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen(); // Agregar Swagger para documentación y prueba
@@ -42,12 +52,17 @@ namespace GestionExpedientesAPI
             }
             else
             {
+                app.UseHttpsRedirection();
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
 
             app.UseHttpsRedirection();
+
             app.UseRouting();
+
+            // Aplicar la política de CORS
+            app.UseCors("AllowAllOrigins");
 
             app.UseAuthorization();
 

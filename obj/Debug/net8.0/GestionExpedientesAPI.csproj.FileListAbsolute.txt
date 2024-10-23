@@ -143,3 +143,4 @@ C:\Users\Windows 10 Pro\Documents\Semestre 2024_2\Integracion de sistemas\projec
 C:\Users\Windows 10 Pro\Documents\Semestre 2024_2\Integracion de sistemas\projects\expedientes\GestionExpedientesAPI\obj\Debug\net8.0\ref\GestionExpedientesAPI.dll
 C:\Users\Windows 10 Pro\Documents\Semestre 2024_2\Integracion de sistemas\projects\expedientes\GestionExpedientesAPI\bin\Debug\net8.0\MySqlConnector.dll
 C:\Users\Windows 10 Pro\Documents\Semestre 2024_2\Integracion de sistemas\projects\expedientes\GestionExpedientesAPI\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\Windows 10 Pro\Documents\Semestre 2024_2\Integracion de sistemas\projects\expedientes\GestionExpedientesAPI\obj\Debug\net8.0\GestionExpedientesAPI.sourcelink.json
